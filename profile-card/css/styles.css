@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  background-color: hsl(185, 75%, 39%);
+  font-size: 18px;
+  text-align: center;
+  font-family: "Kumbh Sans", sans-serif;
+  color: hsl(227, 10%, 46%);
+}
+p {
+  margin-top: 3px;
+  margin-bottom: 0px;
+  font-weight: 400;
+}
+hr {
+  width: 100%;
+  border: solid hsl(0, 0%, 50%) 1px;
+  border-bottom: none;
+  margin-bottom: 25px;
+}
+strong {
+  color: hsl(229, 23%, 23%);
+  font-weight: 700;
+}
+.profile-card {
+  background-color: white;
+  border-radius: 5%;
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(35%);
+  transform: translateY(35%);
+  padding-bottom: 25px;
+  margin: auto auto;
+  display: inline-block;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0 0 3rem hsl(229, 23%, 23%);
+}
+.top-gradient {
+  position: fixed;
+  right: 50%;
+  bottom: 50%;
+  width: 100%;
+}
+.bottom-gradient {
+  position: fixed;
+  width: 100%;
+  left: 50%;
+  top: 60%;
+}
+.profile-photo {
+  border-radius: 50%;
+  position: absolute;
+  top: 24%;
+  left: 35%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 5px solid white;
+}
+.profile-pattern {
+  display: block;
+}
+.followers {
+  display: inline-block;
+}
+.likes {
+  display: inline-block;
+  margin: 0 40px;
+}
+.photos {
+  display: inline-block;
+}
+.profile-description {
+  display: inline-block;
+  padding-top: 60px;
+  padding-bottom: 10px;
+}
