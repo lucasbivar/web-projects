@@ -15,6 +15,10 @@
 ## 📍 Profile Card
  - 📦 [Repository](https://github.com/lucasbivar/web-projects/tree/main/profile-card)
  - 🖥  [Site](https://profile-card-project.netlify.app/)
+ 
+ ## 📍 Huddle
+ - 📦 [Repository](https://github.com/lucasbivar/web-projects/tree/main/huddle)
+ - 🖥  [Site](https://huddle-company.netlify.app/)
 
  
 <hr> 
