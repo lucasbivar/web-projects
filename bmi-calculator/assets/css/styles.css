@@ -1,0 +1,296 @@
+:root {
+  --modal-duration: 0.5s;
+}
+body {
+  background-color: #14193b;
+  background-image: url("https://www.transparenttextures.com/patterns/black-felt.png");
+  margin: 0;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+
+nav {
+  text-align: left;
+}
+
+footer {
+  text-align: center;
+  margin-top: 9%;
+}
+h1,
+h3,
+h4 {
+  font-weight: 600;
+}
+h3 {
+  font-size: 100%;
+  color: #828698;
+}
+h1 {
+  font-size: 250%;
+  line-height: 1;
+}
+h4 {
+  color: none;
+}
+
+.btn-calculate {
+  width: fit-content;
+  padding: 3% 10.5%;
+  background-color: #ff0066;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-weight: 600;
+}
+
+.btn-calculate:hover {
+  background-color: #c80050;
+}
+.btn-calculate:focus {
+  outline: none;
+}
+
+.container-fluid {
+  padding: 2% 10%;
+}
+
+.row {
+  margin-top: 5%;
+}
+
+.logo {
+  width: 20%;
+}
+
+.landing {
+  margin-left: 10%;
+  margin-top: 7%;
+  width: 80%;
+}
+
+.bmi-form {
+  text-align: center;
+  margin-right: 8%;
+}
+.bmi-form-item {
+  background-color: #262a4c;
+  display: block;
+  width: fit-content;
+  padding: 3% 16%;
+  border-radius: 10px;
+  margin: 3% auto;
+}
+
+input[type="range"].slider {
+  width: 100%;
+  margin: 11px 0;
+  background-color: transparent;
+  -webkit-appearance: none;
+}
+input[type="range"].slider:focus {
+  outline: none;
+}
+input[type="range"].slider::-webkit-slider-runnable-track {
+  background: rgba(255, 255, 255, 0.78);
+  border: 0;
+  border-radius: 25px;
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+}
+input[type="range"].slider::-webkit-slider-thumb {
+  margin-top: -11px;
+  width: 27px;
+  height: 27px;
+  background: #ff0066;
+  border: 5px solid #471744;
+  border-radius: 15px;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+input[type="range"].slider:focus::-webkit-slider-runnable-track {
+  background: #ffffff;
+}
+input[type="range"].slider::-moz-range-track {
+  background: rgba(255, 255, 255, 0.78);
+  border: 0;
+  border-radius: 25px;
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+}
+input[type="range"].slider::-moz-range-thumb {
+  width: 27px;
+  height: 27px;
+  background: #ff0066;
+  border: 5px solid #471744;
+  border-radius: 15px;
+  cursor: pointer;
+}
+input[type="range"].slider::-ms-track {
+  background: transparent;
+  border-color: transparent;
+  border-width: 11px 0;
+  color: transparent;
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+}
+input[type="range"].slider::-ms-fill-lower {
+  background: #ffffff;
+  border: 0;
+  border-radius: 50px;
+}
+input[type="range"].slider::-ms-fill-upper {
+  background: rgba(255, 255, 255, 0.78);
+  border: 0;
+  border-radius: 50px;
+}
+input[type="range"].slider::-ms-thumb {
+  width: 27px;
+  height: 27px;
+  background: #ff0066;
+  border: 5px solid #471744;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-top: 0px;
+  /*Needed to keep the Edge thumb centred*/
+}
+input[type="range"].slider:focus::-ms-fill-lower {
+  background: rgba(255, 255, 255, 0.78);
+}
+input[type="range"].slider:focus::-ms-fill-upper {
+  background: #ffffff;
+}
+/*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
+how to remove the virtical space around the range input in IE*/
+@supports (-ms-ime-align: auto) {
+  /* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
+  input[type="range"].slider {
+    margin: 0;
+    /*Edge starts the margin from the thumb, not the track as other browsers do*/
+  }
+}
+
+.grd {
+  width: 100%;
+  position: fixed;
+  bottom: -90px;
+  left: 0px;
+  z-index: -1;
+}
+/* MODAL STYLE  */
+.modal-bg {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-widget {
+  margin: 5% auto;
+  width: 60%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
+  background-color: #262a4c;
+  text-align: center;
+  position: relative;
+  border-radius: 5px;
+}
+.modal-heading {
+  display: block;
+  text-align: right;
+}
+
+.modal-info {
+  padding-left: 25%;
+  padding-right: 25%;
+  padding-top: 2%;
+  padding-bottom: 5%;
+}
+
+.modal-info-heading {
+  font-size: 170%;
+  color: #fff;
+}
+
+.close-icon {
+  width: 1rem;
+  margin-right: 2%;
+  margin-top: 2%;
+}
+
+.btn-share {
+  padding: 3% 10%;
+  background-color: #00ff44;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-weight: 600;
+}
+
+.btn-share:hover {
+  background-color: #06c238;
+}
+.btn-share:focus {
+  outline: none;
+}
+
+.whatsapp-icon {
+  width: 15%;
+  margin-right: 2%;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1028px) {
+  nav,
+  body {
+    text-align: center;
+  }
+  .grd {
+    visibility: hidden;
+  }
+  .landing {
+    width: 70%;
+    margin-left: 0;
+  }
+  .btn-calculate {
+    padding: 3% 7%;
+  }
+  .bmi-form {
+    margin-top: 8%;
+    margin-right: 0;
+  }
+  .logo {
+    margin-top: 7%;
+    width: 70%;
+  }
+  .close-icon {
+    margin-top: 5%;
+    margin-right: 5%;
+  }
+  .modal-info {
+    padding: 10% 10%;
+  }
+  .modal-widget {
+    width: 75%;
+  }
+  .btn-share {
+    padding: 4% 6%;
+  }
+}
