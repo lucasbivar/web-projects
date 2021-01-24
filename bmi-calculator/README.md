@@ -1,5 +1,5 @@
 <img align="center" src="https://i.imgur.com/rfYCqpn.png">
-<h3 align="center">📱 BMI Calculator 📱</h3>
+<h3 align="center">BMI Calculator</h3>
 
 <hr>
 
