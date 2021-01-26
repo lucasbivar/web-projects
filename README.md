@@ -20,6 +20,9 @@
  - 📦 [Repository](https://github.com/lucasbivar/web-projects/tree/main/huddle)
  - 🖥  [Site](https://huddle-company.netlify.app/)
 
+ ## 📍 BMI Calculator
+ - 📦 [Repository](https://github.com/lucasbivar/web-projects/tree/main/bmi-calculator)
+ - 🖥  [Site](https://bmi-healthy-foundation.netlify.app/)
  
 <hr> 
  
