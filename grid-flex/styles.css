@@ -1,0 +1,170 @@
+body, ul, li, p{
+  margin: 0;
+  padding: 0;
+  font-size: 1.2rem;
+  list-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+h1{
+  text-align: center;
+  margin-top: 50px;
+}
+
+img{
+  max-width: 100%;
+  display: block;
+}
+
+body{
+  margin-bottom: 100px;
+}
+
+.header{
+  background-color: #1d1e20;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px;
+  align-items: center;
+}
+
+.menu{
+  display: flex;
+}
+
+.menu li{
+  margin-left: 20px;
+}
+
+.menu li a{
+  padding: 10px;
+  display: block;
+}
+
+/* CSS FLEXBOX */
+
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.flex > div{
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+/* GRID LAYOUT 1 */
+
+
+.grid1{
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 800px;
+  margin: 0 auto;
+  grid-gap: 20px;
+  padding: 10px;
+}
+
+.grid1 > div:nth-child(n + 4){
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  align-items: center;
+}
+
+.grid1 > div.anuncio{
+  grid-column: 1;
+  grid-row: 2/5;
+  display: block;
+}
+
+@media(max-width: 600px){
+  .grid1{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid1 > div:nth-child(n + 4){
+    display: block;
+  }
+  .grid1 > div.anuncio{
+    grid-column: auto;
+    grid-row: auto;
+    order: -1;
+  }
+}
+
+/* GRID LAYOUT 2*/
+
+
+.grid2{
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  grid-gap: 20px;
+  max-width: 800px;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.sidebar > div{
+  margin-bottom: 10px;
+}
+
+@media(max-width: 600px){
+  .grid2{
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar{
+    display: flex;
+    overflow: scroll;
+    /* flex-wrap: wrap; */
+  }
+
+  .sidebar > div{
+    flex: 1 0 200px;
+    margin: 0 10px;
+  }
+}
+
+/* GRID LAYOUT 3 */
+
+.grid3{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 10px;
+}
+
+.grid-3-item:nth-child(1){
+  grid-row: 1/3;
+}
+
+.grid-3-item{
+  display: grid;
+}
+
+.grid-3-item img{
+  grid-column: 1;
+  grid-row: 1/3;
+  align-self: end;
+}
+
+.grid-3-item p{
+  background-color: rgba(0,0,0, 0.6);
+  padding: 10px;
+  color: white;
+  grid-column: 1;
+  grid-row: 2;
+  align-self: end;
+
+}
